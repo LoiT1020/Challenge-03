@@ -6,6 +6,8 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
+
+
 // Write password to the #password input
 function writePassword() {
   var chars="";
@@ -16,11 +18,12 @@ function writePassword() {
   pass = parseInt(pass);
  
  if (pass >=8){
- var confirmU = window.confirm ('uppercase');
+
+  var confirmU = window.confirm ('uppercase');
   if(confirmU){
-   //create Upper case
+   //create Upper ase
    var upper ="QWERTYUIOPASDFGHJKLZXCVBNM"
-   source = upper;
+   chars = upper;
    
  /*window.confirm ('lowercase');
    //create Lower case
@@ -37,7 +40,10 @@ for (var i=0;i<=pass;i++){
 
   var passwordText = document.querySelector("#password");
   var wheretoshow = document.querySelector(".card-body")
+  
   passwordText.value = begin;
+
+  wheretoshow.appendChild(passwordText);
  
 }
   return true;
