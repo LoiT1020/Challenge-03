@@ -10,53 +10,71 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var chars="";
-
-  var begin="";
+  
  
   var pass = window.prompt ('length of passwords');
   pass = parseInt(pass);
- 
- if (pass >=8){
 
-  var confirmU = window.confirm ('uppercase');
+  function genpass (){
+    this.begin='';
+    for (var i=0;i<=pass;i++){
+    var randomNumber = Math.floor(Math.random() * chars.length);
+    begin += chars.substring(randomNumber, randomNumber +1);
+    var passwordText = document.querySelector("#password");
+    var wheretoshow = document.querySelector(".card-body")
+        
+        passwordText.value = begin;
+      
+        wheretoshow.appendChild(passwordText);}
+}
+   
+ while(pass >=8){
+
+  var confirmU = window.confirm ('uppercase?');
   if(confirmU){
    //create Upper ase
    var upper ="QWERTYUIOPASDFGHJKLZXCVBNM"
-   chars = upper;
-   
- /*window.confirm ('lowercase');
-   //create Lower case
-   var lower = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
- window.confirm ('numeric');
+   chars += upper;
+  } else{chars=chars};
+
+  var confirmL=window.confirm('lowercase?');
+  if(confirmL=true){
+  //create lower case
+  var lower= "qwertyuiopasdfghjklzxcvbnm";
+  chars +=lower;} else{chars=chars}
+
+  var confirmN = window.confirm ('numeric');
+  if(confirmN=true){
    //create randomNumber
-   var number ="0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
- window.confirm ('special characters');
-   var spec = "!@#$%^&*()0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";*/
+   var number ="0123456789";
+   chars +=number;} else {chars=chars}
 
-for (var i=0;i<=pass;i++){
-  var randomNumber = Math.floor(Math.random() * chars.length);
-  begin += chars.substring(randomNumber, randomNumber +1);
+  var confirmS= window.confirm ('special characters');
+  if(confirmS=true){
+   //creat special characters
+   var spec = "!@#$%^&*()";
+   chars +=spec;} else {chars=chars}
 
-  var passwordText = document.querySelector("#password");
-  var wheretoshow = document.querySelector(".card-body")
-  
-  passwordText.value = begin;
+   genpass();
 
-  wheretoshow.appendChild(passwordText);
- 
-}
-  return true;
- }
-   }
+   break;
+
+
+   };   
 
 
 
- else {window.alert('something is wrong, please do it again')};
+ window.alert('something is wrong, please do it again')
  
 }  
 
-  
+//variables
+
+var chars="";
+
+var begin="";
+
+
 
 
 

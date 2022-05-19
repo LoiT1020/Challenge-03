@@ -27,4 +27,5 @@ Bonus: I was testing to see if `var chars` will become `var pass` so that I can 
 
 Back to challenge, there are some changing that allow me go through the challenge I have my first develop output 
 
-![first-output]()
+![first-output](./Develop/assets/images/img4.PNG)
+
