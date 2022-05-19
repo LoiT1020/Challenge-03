@@ -29,3 +29,14 @@ Back to challenge, there are some changing that allow me go through the challeng
 
 ![first-output](./Develop/assets/images/img4.PNG)
 
+## Generating password with condition
+
+I add `if` method to add more characters for `chars` through several condition.
+
+I move the initial var `begin` and `chars` to the end to define those global chars 
+
+I make the reset for `begin` whenever the `genpass()` function is used.
+
+## Bug
+
+I have one bug that is the window still arlert the "something is wrong, please do it again" after I sastify the conditions of the password lenghth, but with the time limit, I by pass it and hope I can fix it in future.
